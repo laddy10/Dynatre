@@ -1,0 +1,73 @@
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.71")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+test {
+    systemProperties = System.properties
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
+tasks.withType(Test) {
+    systemProperty "file.encoding", "UTF-8"
+    systemProperties = System.properties
+}
+
+ext {
+    serenityVersion = '2.0.71'
+    serenityCucumberVersion = '1.9.51'
+}
+
+dependencies {
+    // Testing
+    testImplementation 'junit:junit:4.12'
+
+    // Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+
+    // Serenity BDD
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}"
+
+    // WebDriver Management
+    implementation 'io.github.bonigarcia:webdrivermanager:5.0.3'
+
+    // Para capturas PNG (AShot)
+    implementation 'ru.yandex.qatools.ashot:ashot:1.5.4'
+
+    // Excel/datos
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    }
+}
+
+test.finalizedBy('aggregate')

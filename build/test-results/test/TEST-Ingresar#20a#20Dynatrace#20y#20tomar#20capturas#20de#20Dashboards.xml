@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Ingresar a Dynatrace y tomar capturas de Dashboards" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-25T14:15:24" hostname="AU3PH5CG141BG50" time="432.367">
+  <properties/>
+  <testcase name="Ingresar a Dynatrace y capturar Dashboards" classname="Ingresar a Dynatrace y tomar capturas de Dashboards" time="432.367"/>
+  <system-out><![CDATA[? Cambio exitoso a contexto móvil - WhatsApp
+? Copiando 4 capturas al dispositivo...
+? Imagen copiada a Camera: Dashboard_1_25_08_2025 09_16_28.png
+? Imagen copiada a Camera: Dashboard_2_25_08_2025 09_16_46.png
+? Imagen copiada a Camera: Dashboard_3_25_08_2025 09_17_19.png
+? Imagen copiada a Camera: Dashboard_4_25_08_2025 09_18_00.png
+? Galería actualizada - las imágenes aparecerán en Recientes
+? Enviando 4 capturas via WhatsApp...
+? Clic en elemento que contiene: Pruebas Dynatrice
+? INICIANDO SELECCIÓN - 09:18:54.683798700
+? Buscando imagen 1 - 09:18:54.699798600
+? Imagen 1 encontrada - 09:18:54.961090900
+? Click en imagen 1 completado - 09:18:55.012106600
+? Buscando imagen 2 - 09:18:55.012636100
+? Imagen 2 encontrada - 09:19:05.619551400
+? Click en imagen 2 completado - 09:19:35.870893200
+? Buscando imagen 3 - 09:19:35.871894400
+? Imagen 3 encontrada - 09:19:46.562768100
+? Click en imagen 3 completado - 09:20:16.787109200
+? Buscando imagen 4 - 09:20:16.788126800
+? Imagen 4 encontrada - 09:20:27.241728100
+? Click en imagen 4 completado - 09:20:57.628391
+? Buscando botón enviar - 09:20:57.628391
+? ENVÍO COMPLETADO - 09:22:29.362566400
+? Todas las capturas enviadas exitosamente
+]]></system-out>
+  <system-err><![CDATA[ago. 25, 2025 9:15:24 A. M. freemarker.log._JULLoggerFactory$JULLogger info
+INFO: Limpiando carpeta de capturas...
+ago. 25, 2025 9:15:24 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 139.0.7258.138 (884e54ea8d42947ed636779015c5b4815e069838-refs/branch-heads/7258@{#2631}) on port 32555
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 32555.
+ago. 25, 2025 9:15:37 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+ago. 25, 2025 9:16:28 A. M. utils.CapturasPantallasWeb capturaPantalla
+INFO: Captura guardada: Dashboard_1_25_08_2025 09_16_28.png
+ago. 25, 2025 9:16:46 A. M. utils.CapturasPantallasWeb capturaPantalla
+INFO: Captura guardada: Dashboard_2_25_08_2025 09_16_46.png
+ago. 25, 2025 9:17:19 A. M. utils.CapturasPantallasWeb capturaPantalla
+INFO: Captura guardada: Dashboard_3_25_08_2025 09_17_19.png
+ago. 25, 2025 9:18:00 A. M. utils.CapturasPantallasWeb capturaPantalla
+INFO: Captura guardada: Dashboard_4_25_08_2025 09_18_00.png
+ago. 25, 2025 9:18:23 A. M. io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
